@@ -12,6 +12,7 @@ URL:		http://dvd-create.sourceforge.net/index.shtml
 Source:		http://dvd-create.sourceforge.net/%{name}-%{version}.tar.bz2
 Patch:		%{name}-0.1.1-build.patch
 BuildRequires:	libdvdread-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 DVD-Create will not just offer a free DVD Authoring solutions for Linux and
