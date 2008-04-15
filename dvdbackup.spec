@@ -1,16 +1,15 @@
 %define	name	dvdbackup
-%define	version 0.1.1
-%define release %mkrel 3
+%define	version 0.2
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	DVD-Video creation framework
-License: 	GPL
+License: 	GPLv3
 Group:		Archiving/Cd burning
-URL:		http://dvd-create.sourceforge.net/index.shtml
-Source:		http://dvd-create.sourceforge.net/%{name}-%{version}.tar.bz2
-Patch:		%{name}-0.1.1-build.patch
+URL:		http://sourceforge.net/projects/dvdbackup/
+Source:		http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.bz2
 BuildRequires:	libdvdread-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -21,24 +20,20 @@ editing, and backup software without needing to know all the secretes of
 DVD-Video.
 
 %prep
-%setup -q -n %{name}
-%patch
+%setup -q
 
 %build
-cd src
-gcc -o dvdbackup -I%{_includedir}/dvdread -ldvdread %{optflags} dvdbackup.c
+%configure2_5x
 
 %install
 rm -rf %{buildroot}
-install -d -m 755 %{buildroot}%{_bindir}
-install -m 755 src/dvdbackup %{buildroot}%{_bindir}
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README INSTALL COPYING
+%doc NEWS README INSTALL COPYING AUTHORS ABOUT-NLS ChangeLog
 %{_bindir}/%{name}
-
-
+%{_mandir}/man1/dvdbackup.1*
