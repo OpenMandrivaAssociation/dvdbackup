@@ -1,6 +1,6 @@
 %define	name	dvdbackup
-%define	version 0.2
-%define release %mkrel 4
+%define	version 0.4
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -28,11 +28,12 @@ DVD-Video.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
 
-%files
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc NEWS README INSTALL COPYING AUTHORS ABOUT-NLS ChangeLog
 %{_bindir}/%{name}
