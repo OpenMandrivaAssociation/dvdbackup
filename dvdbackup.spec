@@ -1,5 +1,5 @@
 %define	name	dvdbackup
-%define	version 0.4
+%define	version 0.4.1
 %define release %mkrel 1
 
 Name:		%{name}
