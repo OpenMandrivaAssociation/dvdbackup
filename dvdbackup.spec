@@ -1,7 +1,7 @@
 Summary:	DVD-Video creation framework
 Name:		dvdbackup
 Version:	0.4.1
-Release:	9
+Release:	10
 License: 	GPLv3
 Group:		Archiving/Cd burning
 Url:		http://sourceforge.net/projects/dvdbackup/
