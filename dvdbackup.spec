@@ -1,11 +1,13 @@
+%define _disable_rebuild_configure 1
+
 Summary:	DVD-Video creation framework
 Name:		dvdbackup
-Version:	0.4.1
-Release:	11
+Version:	0.4.2
+Release:	1
 License: 	GPLv3
 Group:		Archiving/Cd burning
 Url:		http://sourceforge.net/projects/dvdbackup/
-Source0:	http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(dvdread)
 
 %description
