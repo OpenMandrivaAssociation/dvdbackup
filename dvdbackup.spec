@@ -8,6 +8,8 @@ License: 	GPLv3
 Group:		Archiving/Cd burning
 Url:		http://sourceforge.net/projects/dvdbackup/
 Source0:	http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.xz
+Patch0:   dvdbackup-dvdread-6.1.patch
+
 BuildRequires:	pkgconfig(dvdread)
 
 %description
@@ -18,6 +20,7 @@ DVD-Video.
 
 %prep
 %setup -q
+%autopatch -p0
 
 %build
 %configure
