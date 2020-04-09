@@ -20,7 +20,7 @@ DVD-Video.
 
 %prep
 %setup -q
-%autopatch -p0
+%autopatch -p1
 
 %build
 %configure
