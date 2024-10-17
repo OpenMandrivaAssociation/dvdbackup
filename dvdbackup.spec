@@ -6,7 +6,7 @@ Version:	0.4.2
 Release:	6
 License: 	GPLv3
 Group:		Archiving/Cd burning
-Url:		http://sourceforge.net/projects/dvdbackup/
+Url:		https://sourceforge.net/projects/dvdbackup/
 Source0:	http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.xz
 Patch0:   dvdbackup-dvdread-6.1.patch
 
