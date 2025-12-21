@@ -10,6 +10,11 @@ Url:		https://sourceforge.net/projects/dvdbackup/
 Source0:	http://downloads.sourceforge.net/dvdbackup/%{name}-%{version}.tar.xz
 Patch0:   dvdbackup-dvdread-6.1.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(dvdread)
 
 %description
